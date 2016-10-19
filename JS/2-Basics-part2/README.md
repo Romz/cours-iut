@@ -18,3 +18,7 @@ L'énoncé des exercices est écrit en commentaire dans la partie JS.
 - [JSON simple](https://jsfiddle.net/Romz/jz6v8Lvw/)
 - [Contacts](https://jsfiddle.net/Romz/Lq6414vh/)
 - [Styles](https://jsfiddle.net/Romz/tbgru9b3/)
+
+### Callbacks
+- [Hover](https://jsfiddle.net/Romz/yw1dtdn8/)
+- [Submenu](https://jsfiddle.net/Romz/ode0fv3k/)

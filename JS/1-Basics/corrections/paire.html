@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Fonction carre</title>
+    <script type="text/javascript">
+    // TODO: Demander une valeur a l'utilisateur a l'aide de la fonction prompt et afficher
+    // dans une alert si le nombre est paire ou impaire
+    function paire(nombre) {
+      //return nombre % 2 == 0
+      return !(nombre % 2);
+    }
+    var nb = prompt("Choisissez une valeur");
+    if( paire(nb) ) {
+      alert("Paire");
+    }else {
+      alert("Impaire");
+    }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
