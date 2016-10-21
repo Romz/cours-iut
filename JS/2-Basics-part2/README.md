@@ -2,7 +2,7 @@ Base du js 2eme partie
 ======================
 
 Voici le contenu de ce cours:
-
+- Correction exos cours 2
 - Les objets JSON
 - Les boucles2
 - Les fonctions de rappel
