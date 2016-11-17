@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Basics</title>
+
+    <!-- Inclusion de bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Inclusion de la librairie jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+
+    <style>
+      td > img {
+        max-width: 100px;
+      }
+    </style>
+
+    <script>
+    /*****************/
+    /*     ENONCE    */
+    /*****************/
+
+    /*
+     * Le but de cet exercice est de faire un gestionnaire de cadeau de noel
+     * Cette application sera composee d'un tableau listant les cadeaux et
+     * d'un formulaire permettant d'ajouter un cadeau dans une fenetre modal
+     *
+     * Le tableau et la fenetre model sont dans les sources
+     *
+     */
+
+     /*****************/
+     /*     Bonus     */
+     /*****************/
+
+     /*
+      *  Pour ceux qui on fini en avance:
+      *
+      * 1 - Modifier la fonction renderGifts pour ajouter le lien vers le cadeau sur le nom du cadeau (giftlink)
+      * 2 - Ajouter un bouton permettant de supprimer un element du tableau
+      * 3 - Ajouter une gestion de la sauvegarde des donnees dans le localStorage (Utiliser JSON.parse et JSON.stringify)
+      */
+
+
+    </script>
+
+    <script>
+
+      $(document).ready(function(){
+        renderGifts(); // Permet d'afficher le tableau
+
+        // TODO: CODER ICI
+      });
+    </script>
+
+
+    <script type="text/javascript">
+      /*****************/
+      /* Foncion aide  */
+      /*****************/
+
+       // Creation du tableau de cadeau
+       gifts = [
+         { // EXEMPLE de cadeau
+           giftimage: "http://www.123-tutoriels.com/wp-content/uploads/2012/05/finished-totoro1.jpg",
+           name: "Personne1",
+           giftname: "Peluche totoro",
+           giftprice: 45
+         },
+         {
+           giftimage: "http://cdn.home-designing.com/wp-content/uploads/2015/10/donut-mug-600x600.jpg",
+           name: "Personne1",
+           giftname: "Mug donut",
+           giftprice: 30
+         }
+       ];
+
+       function renderGifts() {
+         $("#gifttable tbody").html(""); // Vide le tableau
+
+         for(var gift of gifts) { // On parcours le tableau de cadeau
+           var line = $("<tr>"); // On cree un element tr
+
+           var img = $("<img>").attr("src", gift.giftimage); // On cree un element image
+           var cellImg = $("<td>").append(img).appendTo(line);  // cree un element td, on lui ajouter l'image, et on ajoute le tout dans le tr
+
+           $("<td>").text(gift.name).appendTo(line);
+           $("<td>").text(gift.giftname).appendTo(line);
+           $("<td>").text(gift.giftprice).appendTo(line);
+           $("#gifttable tbody").append(line);
+         }
+
+       }
+
+    </script>
+
+  </head>
+  <body>
+    <!-- Header -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <h1>Gestionnaire de cadeau de noel</h1>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+
+      <div class="action">
+        <div class="btn-group pull-right">
+          <button class="btn btn-default" id="clearGifts">Vider</button>
+          <button class="btn btn-primary " id="openGiftPopup">Ajouter</button>
+        </div>
+      </div>
+
+      <!-- Table -->
+      <table class="table table-striped" id="gifttable">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Nom de la personne</th>
+            <th>Nom du cadeau</th>
+            <th>Prix</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      <!-- /Table -->
+
+
+      <!-- Modal-->
+      <div class="modal" id="giftModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button class="close closeGiftModal"><span >×</span></button>
+              <h4 class="modal-title">Ajouter un cadeau</h4>
+            </div>
+            <div class="modal-body">
+              <form id="addForm" class="form-horizontal">
+
+                <div class="form-group">
+                  <label for="name" class="col-sm-2 control-label">Nom:</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="name" placeholder="Le nom de la personne &agrave; qui offrir">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="giftname" class="col-sm-2 control-label">Nom du cadeau:</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="giftname" placeholder="Le nom du cadeau">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="giftimage" class="col-sm-2 control-label">Image du cadeau:</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="giftimage" placeholder="Url vers une image du cadeau">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="giftlink" class="col-sm-2 control-label">Lien:</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="giftlink" placeholder="Url vers un site vendant le cadeau">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="giftprice" class="col-sm-2 control-label">Prix:</label>
+                  <div class="col-sm-3">
+                    <div class="input-group">
+                      <input type="number" class="form-control" id="giftlink" placeholder="Prix">
+                      <div class="input-group-addon">&euro;</div>
+                    </div>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-default closeGiftModal">Annuler</button>
+              <button class="btn btn-primary" id="addGift">Ajouter</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Modal-->
+    </div>
+
+  </body>
+</html>

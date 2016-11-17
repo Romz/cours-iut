@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Basics</title>
+
+    <!-- Inclusion de bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Inclusion de la librairie jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+
+      <style>
+        .panes > div.active {
+          display: block;
+        }
+        .panes > div {
+          display: none;
+        }
+
+      </style>
+
+      <script type="text/javascript">
+        /*****************/
+        /*     ENONCE    */
+        /*****************/
+        /*
+         * Le but de l'exercice est de gerer des onglet:
+         *
+         * - Afficher les le bon panel selon le lien clique
+         * - Mettre en active les lien sur les onglet (la class va sur le li)
+         *
+         */
+      </script>
+
+      <script>
+        // TODO: Coder ici
+
+      </script>
+
+  </head>
+  <body>
+    <!-- Header -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <h1>Tabs</h1>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+
+      <ul class="nav nav-tabs">
+        <li class="active">
+          <a class="tab-link" href="#pane1">Panel 1</a>
+        </li>
+        <li><a class="tab-link" href="#pane2">Panel 2</a></li>
+        <li><a class="tab-link" href="#pane3">Panel 3</a></li>
+      </ul>
+      <div class="panes well">
+        <div id="pane1" class="pane active">Contenu du panel 1</div>
+        <div id="pane2" class="pane">Contenu du panel 2</div>
+        <div id="pane3" class="pane">Contenu du panel 3</div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -6,10 +6,11 @@ Liens utiles:
 -------------
 
 - [jQuery](http://coursdewebdesign.com/javascript/)
-- [codingame](https://www.codingame.com/start)
-- [superherojs](http://superherojs.com/)
-- [codeacademy](https://www.codecademy.com/)
-- [codecombat](https://codecombat.com/#)
-- [codeschool](https://www.codeschool.com/)
-- [programr](http://www.programmr.com/)
-- [empireofcode](https://empireofcode.com/)
+- [Codewars](https://www.codewars.com/users/sign_in)
+- [Codingame](https://www.codingame.com/start)
+- [Superherojs](http://superherojs.com/)
+- [Codeacademy](https://www.codecademy.com/)
+- [Codecombat](https://codecombat.com/#)
+- [Codeschool](https://www.codeschool.com/)
+- [Programr](http://www.programmr.com/)
+- [Empireofcode](https://empireofcode.com/)

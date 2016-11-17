@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JQuery</title>
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+    <style>
+      div {
+        padding: 5px;
+        margin: 5px;
+      }
+    </style>
+
+    <script>
+      $(document).ready(function(){
+        $(".child").parent().css("background", "red");
+        $(".child").parents('.super-parent').css("background", "blue");;
+        // Recupere tous les enfants du selecteur
+        $(".parent").children().css("background", "green");
+        // Cherche les elements corresponds a la recherche
+        $('.parent').find(".child.red").css("background", "yellow");
+        // Recupere l'element precedant
+        $("#element").prev().css("color", "white");
+        // Recupere l'element suivant
+        $("#element").next().css("color", "red");
+
+      });
+    </script>
+  </head>
+  <body>
+    <div class="super-parent">
+      <div class="parent">
+        <div class="child">Child 1</div>
+        <div class="child red">Child 2</div>
+        <div class="child">Child 3</div>
+        <div class="child" id="element">Child 4</div>
+        <div class="child">Child 5</div>
+      </div>
+
+    </div>
+  </body>
+</html>
