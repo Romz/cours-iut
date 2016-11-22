@@ -36,7 +36,19 @@
       </script>
 
       <script>
-        // TODO: Coder ici
+        $(document).ready(function(){
+
+          $(".tab-link").click(function(){
+            var href = $(this).attr("href");
+
+            $(".pane").removeClass("active");
+            $(href).addClass("active");
+
+            $(".nav-tabs li").removeClass("active");
+            $(this).parent().addClass("active");
+          });
+
+        });
 
       </script>
 
