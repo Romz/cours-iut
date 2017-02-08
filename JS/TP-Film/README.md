@@ -49,7 +49,7 @@ http://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=58f8f
 
 ### Faire une recherche
 
-https://api.themoviedb.org/3/search/movie/?query=LA_RECHERCHE&api_key=58f8fe741b03b0ae4c9a2ed080e94041
+https://api.themoviedb.org/3/search/movie?query=LA_RECHERCHE&api_key=58f8fe741b03b0ae4c9a2ed080e94041
 
 ### Récupérer les informations d'un film
 

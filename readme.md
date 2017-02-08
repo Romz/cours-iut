@@ -1,4 +1,4 @@
-Cours IUT
+Cours JS
 =========
 
 
