@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Fonction carre</title>
+    <script type="text/javascript">
+    // TODO: faire un generateur de nom de personnage star wars avec les champs text, et l'afficher dans la div resultat
+    // Voici la regle:
+    /*
+    Pour le prénom :
+    3 premières lettres de votre nom + 2 premières lettres de votre prénom
+
+    Pour le nom :
+    2 premières lettres du nom de jeune fille de votre mère + 3 premières lettres de votre ville de naissance
+
+    */
+
+    function generate() {
+      var firstname = document.getElementById("prenom").value;
+      var lastname = document.getElementById("nom").value;
+      var momName = document.getElementById("nom-maman").value;
+      var city = document.getElementById("ville").value;
+
+      var newFirstname = lastname.slice(0,3) + firstname.slice(0, 2);
+      var newLastname = momName.slice(0,2) + city.slice(0, 3);
+      document.getElementById("resultat").innerHTML = newFirstname + " " + newLastname;
+    }
+
+    </script>
+    <style media="screen">
+
+    </style>
+  </head>
+  <body>
+    <h2>Star wars mega name generator +</h2>
+    <div class="form">
+      <div class="input">
+        <input type="text" id="nom" placeholder="Votre nom"/>
+      </div>
+      <div class="input">
+        <input type="text" id="prenom" placeholder="Votre prenom"/>
+      </div>
+      <div class="input">
+        <input type="text" id="nom-maman" placeholder="Le nom de jeune fille de votre mere"/>
+      </div>
+      <div class="input">
+        <input type="text" id="ville" placeholder="Votre ville de naissance"/>
+      </div>
+      <button onclick="generate()">Generate</button>
+    </div>
+
+    <div id="resultat">Le resultat</div>
+  </body>
+</html>
